@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visualizations</title>
 <style>
-
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,92 +15,90 @@
     align-items: center;
     justify-content: center;
   }
+  #containerIntro h1, 
+  #containerIntro h3 {
+    display: inline;
+  }
   .header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Allows absolute positioning within the header */
+    position: relative;
     margin-bottom: 20px;
-    padding-top: 5px; /* Add padding at the top of the header */
+    padding-top: 5px;
   }
-
-
-.header img {
-  position: absolute;
-  left: 20px; /* Adjust based on your padding or desired spacing */
-  top: 0;
-  width: 100px; /* Set your logo width here */
-  height: auto; /* Adjust height automatically to maintain aspect ratio */
-}
-
+  .header img {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 100px;
+    height: auto;
+  }
   .iframe-container {
-    display: none; /* Initially hide all containers */
-    margin: 20px;
+    display: block;
+    margin: 20px 0;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: 960px;
   }
-  .iframe-container.active {
-    display: block; /* Only show the active container */
+
+  .iframe-container1 {
+    display: inline;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
+    transition: all 0.3s ease;
+    width: 43%;
+    max-width: 960px;
   }
-  iframe {
-    border: none;
+
+  .iframe1 iframe, .iframe2 iframe {
+    width: 102%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
   }
-  .iframe1 iframe {
+  
+
+  .iframe3 iframe, .iframe4 iframe, .iframe5 iframe, .iframe6 iframe {
     width: 600px;
-    height: 371px;
+    height: auto;
+    aspect-ratio: 600 / 371;
   }
-  .iframe2 iframe {
-    width: 825px;
-    height: 510px;
-  }
-  .iframe3 iframe {
-    width: 600px;
-    height: 371px;
-  }
-  .iframe4 iframe {
-    width: 900px;
-    height: 400px;
-  }
-  .iframe5 iframe {
-    width: 600px;
-    height: 371px;
-  }
-  .iframe6 .info-container {
+  
+
+  
+  
+  .iframe1 .info-container {
     padding: 20px;
-    max-width: 800px; /* Adjust based on your preference */
-    margin: auto; /* Center the content */
-    }
-
-    .iframe6 h2 {
-    font-size: 22px; /* Adjust based on your preference */
-    color: #333; /* Darker text for better readability */
-    margin-top: 20px;
-    }
-
-    .iframe6 p, .iframe6 li {
-    font-size: 16px; /* Adjust based on your preference */
-    color: black; /* Slightly lighter text */
-    line-height: 1.6; /* Improved readability */
-    }
-
-    .iframe6 ul {
-    margin-left: 20px; /* Proper indentation for lists */
-    }
-
-  .navigation {
+    max-width: 800px;
+    margin: auto;
+  }
+  .iframe1 h2 {
+    font-size: 22px;
+    color: #333;
     margin-top: 20px;
   }
-  button {
-    padding: 10px 20px;
+  .iframe1 p, .iframe1 li {
     font-size: 16px;
-    cursor: pointer;
+    color: black;
+    line-height: 1.6;
   }
-
-  #containerIntro h1,
-  #containerIntro h3 {
-    display: inline;   
+  .iframe1 ul {
+    margin-left: 20px;
+  }
+  @media (max-width: 768px) {
+    .header img {
+      width: 60px;
+    }
+    .header h1 {
+      font-size: 20px;
+    }
+    .iframe-container {
+      margin: 10px 0;
+    }
   }
 </style>
 </head>
@@ -111,71 +108,40 @@
     <img src="logo.png" alt="Logo">
     <h1>Coursera Application Analytics</h1>
 </div>
-      
 
-<div class="iframe-container active iframe6">
+<div class="iframe-container iframe1">
     <div class="info-container">
       <div id="containerIntro">
-        <h1>Total Applications Received - 324 </h1><h3>(till Apr 15, 2024)</h3>
+        <h1>Total Applications Received - 324 </h1>
+        <h3>(till Apr 15, 2024)</h3>
+      </div>
+      <h2>Eligibility Criteria</h2>
+      <p>To apply and enrol in the programme, you must have 16 years of formal education. You must meet one of the following criteria:</p>
+      <ul>
+          <li>4 years bachelor/undergraduate in STEM fields</li>
+          <li>Final year student pursuing a 4 year bachelor/undergraduate degree programme in STEM fields and due to graduate before July 2024.</li>
+          <li>3 years bachelor/undergraduate in STEM fields + any PG Diploma/Master to show 16 years of formal education</li>
+          <li>3-year bachelor/undergraduate in any field + PG Diploma/Masters in STEM fields to show 16 years of education</li>
+          <li>STEM includes B.E., B.Tech, BSc (Computer Science, IT, Physics, Chemistry, Maths, Statistics, IT), B.A. Economics, BCA, M.Sc. (Maths, Statistics, IT), MCA, M.Tech.</li>
+      </ul>
     </div>
-        
-        <h2>Eligibility Criteria</h2>
-        <p>To apply and enrol in the programme, you must have 16 years of formal education. You must meet one of the following criteria:</p>
-        <ul>
-            <li>4 years bachelor/undergraduate in STEM fields</li>
-            <li>Final year student pursuing a 4 year bachelor/undergraduate degree programme in STEM fields and due to graduate before July 2024.</li>
-            <li>3 years bachelor/undergraduate in STEM fields + any PG Diploma/Master to show 16 years of formal education</li>
-            <li>3-year bachelor/undergraduate in any field + PG Diploma/Masters in STEM fields to show 16 years of education</li>
-            <li>STEM includes B.E., B.Tech, BSc (Computer Science, IT, Physics, Chemistry, Maths, Statistics, IT), B.A. Economics, BCA, M.Sc. (Maths, Statistics, IT), MCA, M.Tech.</li>
-        </ul>
-    </div>
-</div>
-
-<div class="iframe-container iframe4">
-    <iframe seamless frameborder="0" scrolling="no" src="https://master.dnfr543srwrnx.amplifyapp.com/demographics.html"></iframe>
-</div>
-<div class="iframe-container iframe1">
-  <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhItjLk9XczvKLQtm5Brj19KqNdZia8sDCNUj7layT5v53IiLsbIOu5J8G1G0Tov_gKf5wzhJnaRFA/pubchart?oid=888451866&amp;format=interactive"></iframe>
 </div>
 
 <div class="iframe-container iframe2">
+    <iframe seamless frameborder="0" scrolling="no" src="https://master.dnfr543srwrnx.amplifyapp.com/demographics.html"></iframe>
+</div>
+<div class="iframe-container1 iframe3">
+  <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhItjLk9XczvKLQtm5Brj19KqNdZia8sDCNUj7layT5v53IiLsbIOu5J8G1G0Tov_gKf5wzhJnaRFA/pubchart?oid=888451866&amp;format=interactive"></iframe>
+</div>
+<div class="iframe-container1 iframe4">
   <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhItjLk9XczvKLQtm5Brj19KqNdZia8sDCNUj7layT5v53IiLsbIOu5J8G1G0Tov_gKf5wzhJnaRFA/pubchart?oid=1690145355&format=interactive"></iframe>
 </div>
-<div class="iframe-container iframe3">
+<div class="iframe-container1 iframe5">
   <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhItjLk9XczvKLQtm5Brj19KqNdZia8sDCNUj7layT5v53IiLsbIOu5J8G1G0Tov_gKf5wzhJnaRFA/pubchart?oid=1176516988&format=interactive"></iframe>
 </div>
-<div class="iframe-container iframe5">
+<div class="iframe-container1 iframe6">
     <iframe seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhItjLk9XczvKLQtm5Brj19KqNdZia8sDCNUj7layT5v53IiLsbIOu5J8G1G0Tov_gKf5wzhJnaRFA/pubchart?oid=321620396&format=interactive"></iframe>
 </div>
-
-
-
-
-<div class="navigation">
-  <button onclick="changePage(-1)">Back</button>
-  <button onclick="changePage(1)">Next</button>
-</div>
-
-<script>
-  let currentIndex = 0;
-  const containers = document.querySelectorAll('.iframe-container');
-
-  function changePage(direction) {
-    // Hide the current container
-    containers[currentIndex].classList.remove('active');
-
-    // Calculate the new index, cycling back to the start/end if necessary
-    currentIndex += direction;
-    if (currentIndex >= containers.length) {
-      currentIndex = 0;
-    } else if (currentIndex < 0) {
-      currentIndex = containers.length - 1;
-    }
-
-    // Show the new current container
-    containers[currentIndex].classList.add('active');
-  }
-</script>
 
 </body>
 </html>
